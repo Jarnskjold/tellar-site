@@ -1,0 +1,120 @@
+{
+  "oppdatert": "2026-10-15 17:58",
+  "produkt": "Byggesaksvarsel for takfirma",
+  "produkt_status": "Prototype i drift – pilotrekruttering",
+  "milepeler": [
+    {
+      "id": "research",
+      "navn": "Markedsresearch og forretningside",
+      "status": "ferdig",
+      "dato": "2026-10-15"
+    },
+    {
+      "id": "navn",
+      "navn": "Merkevaren Tellar valgt, tellar.no kjøpt",
+      "status": "ferdig",
+      "dato": "2026-10-15"
+    },
+    {
+      "id": "nettside",
+      "navn": "Landingsside publisert på tellar.no",
+      "status": "ferdig",
+      "dato": "2026-10-15"
+    },
+    {
+      "id": "prototype",
+      "navn": "Lead-prototype (eInnsyn → score → CSV)",
+      "status": "ferdig",
+      "dato": "2026-10-15"
+    },
+    {
+      "id": "dashboard",
+      "navn": "Internt statusdashboard",
+      "status": "ferdig",
+      "dato": "2026-10-15"
+    },
+    {
+      "id": "pilot",
+      "navn": "Rekruttere 3–5 pilotkunder (gratis 30 dager)",
+      "status": "planlagt",
+      "dato": null
+    },
+    {
+      "id": "ukentlig",
+      "navn": "Automatisk ukentlig rapport på e-post",
+      "status": "planlagt",
+      "dato": null
+    },
+    {
+      "id": "betaling",
+      "navn": "Betaling/Stripe etter pilot",
+      "status": "planlagt",
+      "dato": null
+    }
+  ],
+  "pilotkunder": 0,
+  "omsetning_nok": 0,
+  "leads": {
+    "totalt": 402,
+    "per_kommune": {
+      "Stavanger kommune": 124,
+      "Fredrikstad kommune": 102,
+      "Arendal kommune": 69,
+      "Grimstad kommune": 37,
+      "Bodø kommune": 26,
+      "Malvik kommune": 24,
+      "Froland kommune": 20
+    },
+    "siste_kjoring": "2026-10-15",
+    "relevante_siste_7_dager": 63,
+    "scorefordeling": {
+      "20–39": 275,
+      "40–59": 104,
+      "60–79": 19,
+      "80–100": 4
+    },
+    "fasefordeling": {
+      "Ukjent fase": 160,
+      "Igangsettingstillatelse": 90,
+      "Søknad sendt": 84,
+      "Rammetillatelse": 22,
+      "Tillatelse gitt": 21,
+      "Ferdigattest": 16,
+      "Forhåndskonferanse": 9
+    }
+  },
+  "okonomi": {
+    "poster": [
+      {
+        "post": "tellar.no (Uniweb, 1. år)",
+        "belop": 7.5,
+        "merknad": "Tilbudspris 6 kr + mva"
+      },
+      {
+        "post": "E-post Essential (Uniweb, 1. år)",
+        "belop": 180,
+        "merknad": "Halv pris første år, ca. 15 kr/mnd + mva ≈ 180 kr/år"
+      },
+      {
+        "post": "GitHub Pages",
+        "belop": 0,
+        "merknad": "Gratis"
+      }
+    ],
+    "totalt": 187.5
+  },
+  "venter_pa_tobbiz": [
+    "Formelt vedtekts-/formålsendring for Jarnskjold AS (utvide til programvare/digitale tjenester) via Altinn",
+    "Manuell sjekk av «Tellar» hos Patentstyret (klasse 35 og 42)",
+    "Godkjenne e-post til Digdir om bruk av eInnsyn-søke-API for kommersiell gjenbruk",
+    "Opprette leon@tellar.no i Uniweb og dele passord trygt",
+    "Godkjenne pilot-e-post før utsending til takfirma"
+  ],
+  "neste_steg": [
+    "Sende pilottilbud til 10–15 takfirma (B2B) etter godkjenning",
+    "Kjøre ukentlig lead-henting for pilotkommuner",
+    "Forbedre dekning: kartlegge kommuner uten eInnsyn (direkte innsyn/Elements)",
+    "Slå på Enforce HTTPS for tellar.no i GitHub Pages"
+  ],
+  "noter": "Mange større kommuner (Oslo, Bergen, Trondheim, Sandnes m.fl.) publiserer ikke byggesaker i eInnsyn – kun de kommunene vi har enhet-ID for dekkes i dag."
+}
