@@ -4,37 +4,74 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex, nofollow">
-<title>Tellar – Status</title>
-<link rel="stylesheet" href="../style.css">
+<title>Tellar Command Center</title>
 <style>
-.gate{max-width:420px;margin:12vh auto;padding:28px;background:#fff;border:1px solid #e5e9ef;border-radius:14px}
-.gate input{width:100%;padding:12px;border:1px solid #cdd5df;border-radius:8px;font-size:1rem;margin:12px 0}
-.gate .err{color:#b00020;font-size:.9rem;display:none}
+:root{
+  --bg:#070b14; --panel:#0d1526; --panel2:#111c31; --border:#1c2a45;
+  --text:#e8eefc; --muted:#8b9bb8; --cyan:#22d3ee; --green:#34d399;
+  --amber:#fbbf24; --pink:#f472b6; --violet:#a78bfa; --red:#fb7185;
+}
+*{box-sizing:border-box}
+body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,sans-serif;background:radial-gradient(1200px 600px at 10% -10%,#13203a 0%,var(--bg) 55%);color:var(--text);min-height:100vh}
+a{color:var(--cyan)}
+.gate{max-width:420px;margin:14vh auto;padding:28px;background:var(--panel);border:1px solid var(--border);border-radius:16px;box-shadow:0 0 40px #22d3ee22}
+.gate h1{font-size:1.35rem;margin:.4em 0}
+.gate .logo{font-weight:800;letter-spacing:.02em;color:var(--cyan);text-decoration:none;font-size:1.3rem}
+.gate .logo span{color:var(--amber)}
+.gate input{width:100%;padding:12px 14px;border-radius:10px;border:1px solid var(--border);background:#0a1220;color:var(--text);font-size:1rem;margin:12px 0}
+.gate .err{color:var(--red);font-size:.9rem;display:none}
+.btn{display:inline-block;background:linear-gradient(135deg,var(--cyan),#0ea5e9);color:#041018;border:0;padding:11px 18px;border-radius:10px;font-weight:700;cursor:pointer}
+.hint{color:var(--muted);font-size:.85rem;margin-top:10px}
 #app{display:none}
-.statgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:14px;margin:20px 0}
-.stat{background:#fff;border:1px solid #e5e9ef;border-radius:12px;padding:16px}
-.stat b{display:block;font-size:1.6rem;color:var(--brand)}
-.stat span{color:var(--muted);font-size:.85rem}
-.bar{display:flex;align-items:center;gap:10px;margin:6px 0;font-size:.9rem}
-.bar i{display:inline-block;height:10px;background:var(--brand);border-radius:4px}
-.ms{list-style:none;padding:0}.ms li{display:flex;gap:12px;padding:10px 0;border-bottom:1px solid #eef1f5}
-.ms .dot{width:10px;height:10px;border-radius:50%;margin-top:6px;flex-shrink:0}
-.dot.ferdig{background:#2e7d32}.dot.pågår{background:var(--accent)}.dot.planlagt{background:#c5ced8}
-.listy{padding-left:1.1rem}.listy li{margin:.4rem 0}
-.warn{background:#fff8e6;border:1px solid #f0e0a8;padding:12px 14px;border-radius:8px;font-size:.9rem}
-.topbar{display:flex;justify-content:space-between;align-items:center;padding:12px 0}
-.logout{background:transparent;border:1px solid #cdd5df;border-radius:8px;padding:6px 12px;cursor:pointer}
-table.mini{width:100%;border-collapse:collapse;font-size:.9rem}table.mini td,table.mini th{border-bottom:1px solid #eef1f5;padding:6px 4px;text-align:left}
+.shell{max-width:1280px;margin:0 auto;padding:16px 18px 48px}
+.top{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:18px;padding:12px 16px;background:var(--panel);border:1px solid var(--border);border-radius:14px}
+.brand{display:flex;align-items:center;gap:12px}
+.brand .mark{font-weight:800;font-size:1.25rem;color:var(--cyan)}.brand .mark span{color:var(--amber)}
+.brand .sub{color:var(--muted);font-size:.82rem}
+.live{display:flex;align-items:center;gap:8px;font-variant-numeric:tabular-nums;color:var(--green);font-size:.95rem}
+.live i{width:8px;height:8px;border-radius:50%;background:var(--green);box-shadow:0 0 10px var(--green);animation:pulse 1.6s infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.35}}
+.logout{background:transparent;border:1px solid var(--border);color:var(--muted);border-radius:8px;padding:7px 12px;cursor:pointer}
+.warn{font-size:.75rem;color:var(--amber);opacity:.85;margin:0 0 14px}
+.kpis{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;margin-bottom:14px}
+.kpi{background:linear-gradient(180deg,var(--panel2),var(--panel));border:1px solid var(--border);border-radius:14px;padding:14px 16px;position:relative;overflow:hidden}
+.kpi::after{content:"";position:absolute;inset:auto -20% -40% 40%;height:80%;background:radial-gradient(circle,var(--glow,#22d3ee33),transparent 70%);pointer-events:none}
+.kpi .label{color:var(--muted);font-size:.75rem;text-transform:uppercase;letter-spacing:.08em}
+.kpi .val{font-size:1.85rem;font-weight:800;font-variant-numeric:tabular-nums;margin:4px 0;color:var(--glow,#22d3ee)}
+.kpi canvas{width:100%!important;height:36px!important}
+.grid{display:grid;grid-template-columns:1.4fr 1fr;gap:12px;margin-bottom:12px}
+.grid3{display:grid;grid-template-columns:1.1fr 1fr 1fr;gap:12px;margin-bottom:12px}
+.panel{background:var(--panel);border:1px solid var(--border);border-radius:14px;padding:16px 18px;min-height:0}
+.panel h2{margin:0 0 12px;font-size:.95rem;font-weight:700;color:var(--text);display:flex;justify-content:space-between;align-items:center}
+.panel h2 span{color:var(--muted);font-weight:500;font-size:.78rem}
+.chart-box{position:relative;height:240px}
+.chart-box.sm{height:200px}
+.timeline{list-style:none;padding:0;margin:0}
+.timeline li{display:grid;grid-template-columns:16px 1fr;gap:12px;padding:8px 0;border-left:none}
+.timeline .dot{width:12px;height:12px;border-radius:50%;margin-top:4px;box-shadow:0 0 8px currentColor}
+.timeline .dot.ferdig{background:var(--green);color:var(--green)}
+.timeline .dot.pågår{background:var(--amber);color:var(--amber)}
+.timeline .dot.planlagt{background:#334155;color:#64748b;box-shadow:none}
+.timeline .meta{color:var(--muted);font-size:.8rem}
+.list{margin:0;padding-left:1.1rem;color:var(--muted);font-size:.9rem}
+.list li{margin:.45rem 0}
+.status-row{display:flex;flex-wrap:wrap;gap:10px;font-size:.85rem;color:var(--muted)}
+.badge{border:1px solid var(--border);border-radius:999px;padding:4px 10px;background:#0a1220}
+.badge b{color:var(--cyan)}
+.progress{height:8px;background:#0a1220;border-radius:99px;overflow:hidden;margin:8px 0 4px}
+.progress i{display:block;height:100%;background:linear-gradient(90deg,var(--cyan),var(--violet));border-radius:99px}
+.note{color:var(--muted);font-size:.78rem;margin-top:14px}
+@media(max-width:980px){.kpis{grid-template-columns:repeat(2,1fr)}.grid,.grid3{grid-template-columns:1fr}.kpi:last-child{grid-column:1/-1}}
+@media(max-width:520px){.kpis{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
-<div class="wrap">
 <div id="gate" class="gate">
   <a class="logo" href="/">Tellar<span>.</span></a>
-  <h1 style="font-size:1.4rem;margin:.6em 0">Status</h1>
-  <p class="muted" style="font-size:.9rem">Internt dashboard. Lett beskyttelse – ikke egentlig sikkerhet.</p>
+  <h1>Command Center</h1>
+  <p class="hint">Internt dashboard. Lett beskyttelse – ikke egentlig sikkerhet.</p>
   <form id="login">
-    <label for="pw">Passord</label>
+    <label for="pw" class="hint">Passord</label>
     <input id="pw" type="password" autocomplete="current-password" required>
     <p class="err" id="err">Feil passord</p>
     <button class="btn" type="submit">Åpne</button>
@@ -42,78 +79,160 @@ table.mini{width:100%;border-collapse:collapse;font-size:.9rem}table.mini td,tab
 </div>
 
 <div id="app">
-  <div class="topbar">
-    <a class="logo" href="/">Tellar<span>.</span></a>
-    <button class="logout" id="logout">Logg ut</button>
+  <div class="shell">
+    <div class="top">
+      <div class="brand">
+        <div class="mark">Tellar<span>.</span></div>
+        <div class="sub" id="produkt">Command Center</div>
+      </div>
+      <div class="live"><i></i><span id="clock">–</span></div>
+      <button class="logout" id="logout" type="button">Logg ut</button>
+    </div>
+    <p class="warn">Passordet beskytter kun mot tilfeldig innsyn. data.json er lesbar for den som kjenner URL-en.</p>
+
+    <div class="kpis" id="kpis"></div>
+
+    <div class="grid">
+      <section class="panel">
+        <h2>Saker per dag <span>siste 30 dager · journaldato</span></h2>
+        <div class="chart-box"><canvas id="cDay"></canvas></div>
+      </section>
+      <section class="panel">
+        <h2>Saker per uke <span>ISO-uker</span></h2>
+        <div class="chart-box"><canvas id="cWeek"></canvas></div>
+      </section>
+    </div>
+
+    <div class="grid3">
+      <section class="panel">
+        <h2>Per kommune</h2>
+        <div class="chart-box sm"><canvas id="cKom"></canvas></div>
+      </section>
+      <section class="panel">
+        <h2>Scorefordeling</h2>
+        <div class="chart-box sm"><canvas id="cScore"></canvas></div>
+      </section>
+      <section class="panel">
+        <h2>Fasefordeling</h2>
+        <div class="chart-box sm"><canvas id="cFase"></canvas></div>
+      </section>
+    </div>
+
+    <div class="grid">
+      <section class="panel">
+        <h2>30-dagers plan <span id="planPct"></span></h2>
+        <div class="progress"><i id="planBar" style="width:0%"></i></div>
+        <ul class="timeline" id="milepeler"></ul>
+      </section>
+      <section class="panel">
+        <h2>Siste kjøring</h2>
+        <div class="status-row" id="lastrun"></div>
+        <h2 style="margin-top:22px">Venter på Tobbiz</h2>
+        <ul class="list" id="venter"></ul>
+        <h2 style="margin-top:22px">Neste steg</h2>
+        <ul class="list" id="neste"></ul>
+      </section>
+    </div>
+    <p class="note" id="noter"></p>
+    <p class="note">Tellar er et varemerke under Jarnskjold AS, org.nr 989 222 848 · Oppdatert <span id="oppdatert">–</span></p>
   </div>
-  <p class="eyebrow">Internt</p>
-  <h1>Status – Tellar</h1>
-  <p class="muted" id="oppdatert"></p>
-  <p class="warn">Passordet beskytter kun mot tilfeldig innsyn. Alle data er også synlige i <code>data.json</code> for den som kjenner URL-en.</p>
-
-  <div class="statgrid" id="stats"></div>
-
-  <div class="two" style="margin-top:32px">
-    <div>
-      <h2>Milepæler (30-dagers plan)</h2>
-      <ul class="ms" id="milepeler"></ul>
-    </div>
-    <div>
-      <h2>Leads per kommune</h2>
-      <div id="kommuner"></div>
-      <h3 class="sub">Scorefordeling</h3>
-      <div id="scores"></div>
-    </div>
-  </div>
-
-  <div class="two" style="margin-top:32px">
-    <div>
-      <h2>Økonomi</h2>
-      <table class="mini" id="okonomi"></table>
-    </div>
-    <div>
-      <h2>Venter på Tobbiz</h2>
-      <ul class="listy" id="venter"></ul>
-    </div>
-  </div>
-
-  <h2>Neste steg</h2>
-  <ul class="listy" id="neste"></ul>
-  <p class="tiny" id="noter" style="margin:24px 0 48px"></p>
-  <footer class="foot"><p>Tellar er et varemerke under Jarnskjold AS, org.nr 989 222 848.</p></footer>
 </div>
-</div>
+
+<script src="vendor/chart.umd.min.js"></script>
 <script>
 const HASH="e0f62abbb8241205118f6f84495d7f547a1ce77a8ae2735e264b28ee9c846e40";
-async function sha(s){const b=new TextEncoder().encode(s);const h=await crypto.subtle.digest('SHA-256',b);return [...new Uint8Array(h)].map(x=>x.toString(16).padStart(2,'0')).join('')}
-function showApp(){document.getElementById('gate').style.display='none';document.getElementById('app').style.display='block';load()}
-document.getElementById('login').onsubmit=async e=>{e.preventDefault();const p=document.getElementById('pw').value.trim();if(await sha(p)===HASH){sessionStorage.setItem('tellar_ok','1');showApp()}else{document.getElementById('err').style.display='block'}}
-document.getElementById('logout').onclick=()=>{sessionStorage.removeItem('tellar_ok');location.reload()}
-if(sessionStorage.getItem('tellar_ok')==='1') showApp();
+const neon=["#22d3ee","#34d399","#a78bfa","#fbbf24","#f472b6","#60a5fa","#fb7185","#2dd4bf"];
+Chart.defaults.color="#8b9bb8";
+Chart.defaults.borderColor="#1c2a45";
+Chart.defaults.font.family="Inter, system-ui, sans-serif";
+
+async function sha(s){
+  const b=new TextEncoder().encode(s);
+  const h=await crypto.subtle.digest("SHA-256",b);
+  return [...new Uint8Array(h)].map(x=>x.toString(16).padStart(2,"0")).join("");
+}
+function showApp(){document.getElementById("gate").style.display="none";document.getElementById("app").style.display="block";tick();load()}
+document.getElementById("login").onsubmit=async e=>{
+  e.preventDefault();
+  const p=document.getElementById("pw").value.trim();
+  if(await sha(p)===HASH){sessionStorage.setItem("tellar_ok","1");showApp()}
+  else document.getElementById("err").style.display="block";
+};
+document.getElementById("logout").onclick=()=>{sessionStorage.removeItem("tellar_ok");location.reload()};
+if(sessionStorage.getItem("tellar_ok")==="1") showApp();
+
+function tick(){
+  const el=document.getElementById("clock");
+  const fmt=()=>{el.textContent=new Date().toLocaleString("nb-NO",{timeZone:"Europe/Oslo",weekday:"short",day:"2-digit",month:"short",hour:"2-digit",minute:"2-digit",second:"2-digit"})+" CEST"};
+  fmt(); setInterval(fmt,1000);
+}
+function animateCount(el, target, suffix=""){
+  const t0=performance.now(), dur=900, from=0;
+  const step=t=>{
+    const p=Math.min(1,(t-t0)/dur);
+    const eased=1-Math.pow(1-p,3);
+    const v=from+(target-from)*eased;
+    el.textContent=(Number.isInteger(target)?Math.round(v):v.toFixed(1))+suffix;
+    if(p<1) requestAnimationFrame(step);
+  };
+  requestAnimationFrame(step);
+}
+function spark(canvas, values, color){
+  return new Chart(canvas,{type:"line",data:{labels:values.map((_,i)=>i),datasets:[{data:values,borderColor:color,borderWidth:2,pointRadius:0,tension:.35,fill:true,backgroundColor:color+"22"}]},
+    options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false},tooltip:{enabled:false}},scales:{x:{display:false},y:{display:false,min:0}}}});
+}
+function bar(id, labels, values, color){
+  return new Chart(document.getElementById(id),{type:"bar",data:{labels,datasets:[{data:values,backgroundColor:color,borderRadius:6,borderSkipped:false}]},
+    options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false}},scales:{x:{grid:{display:false}},y:{beginAtZero:true,ticks:{precision:0}}}}});
+}
+function line(id, labels, values, color){
+  return new Chart(document.getElementById(id),{type:"line",data:{labels,datasets:[{data:values,borderColor:color,backgroundColor:color+"33",fill:true,tension:.3,pointRadius:2,pointHoverRadius:5}]},
+    options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false}},scales:{x:{grid:{display:false}},y:{beginAtZero:true,ticks:{precision:0}}}}});
+}
+function doughnut(id, labels, values){
+  return new Chart(document.getElementById(id),{type:"doughnut",data:{labels,datasets:[{data:values,backgroundColor:neon,borderWidth:0}]},
+    options:{responsive:true,maintainAspectRatio:false,cutout:"62%",plugins:{legend:{position:"bottom",labels:{boxWidth:10,font:{size:11}}}}}});
+}
+
 async function load(){
-  const d=await (await fetch('data.json',{cache:'no-store'})).json();
-  document.getElementById('oppdatert').textContent='Sist oppdatert: '+(d.oppdatert||'–')+' · '+d.produkt_status;
+  const d=await (await fetch("data.json",{cache:"no-store"})).json();
+  document.getElementById("produkt").textContent=d.produkt_status||d.produkt||"";
+  document.getElementById("oppdatert").textContent=d.oppdatert||"–";
+  document.getElementById("noter").textContent=d.noter||"";
   const L=d.leads||{}, O=d.okonomi||{};
-  document.getElementById('stats').innerHTML=[
-    ['Saker i pipeline', L.totalt||0],
-    ['Relevante siste 7 dager', L.relevante_siste_7_dager||0],
-    ['Siste kjøring', L.siste_kjoring||'–'],
-    ['Pilotkunder', d.pilotkunder||0],
-    ['Omsetning', (d.omsetning_nok||0)+' kr'],
-    ['Kostnader så langt', (O.totalt||0)+' kr']
-  ].map(([k,v])=>`<div class="stat"><b>${v}</b><span>${k}</span></div>`).join('');
-  document.getElementById('milepeler').innerHTML=(d.milepeler||[]).map(m=>`<li><span class="dot ${m.status}"></span><div><b>${m.navn}</b><br><span class="muted">${m.status}${m.dato?' · '+m.dato:''}</span></div></li>`).join('');
-  const kom=L.per_kommune||{};
-  document.getElementById('kommuner').innerHTML=Object.entries(kom).sort((a,b)=>b[1]-a[1]).map(([k,v])=>{
-    const w=Math.max(8, Math.round(100*v/(L.totalt||1)));
-    return `<div class="bar"><i style="width:${w}%"></i><span>${k.replace(' kommune','')}: <b>${v}</b></span></div>`;
-  }).join('')||'<p class="muted">Ingen data</p>';
+  const dayVals=L.per_dag?.values||[];
+  const kpis=[
+    {label:"Saker totalt", val:L.totalt||0, glow:"#22d3ee", spark:dayVals, suf:""},
+    {label:"Relevante denne uka", val:L.relevante_siste_7_dager||0, glow:"#34d399", spark:dayVals.slice(-7), suf:""},
+    {label:"Pilotkunder", val:d.pilotkunder||0, glow:"#a78bfa", spark:[0,0,0,0,0,0,d.pilotkunder||0], suf:""},
+    {label:"MRR", val:d.mrr_nok||0, glow:"#fbbf24", spark:[0,0,0,0,0,0,d.mrr_nok||0], suf:" kr"},
+    {label:"Kostnader", val:O.totalt||0, glow:"#f472b6", spark:[0,0,0,O.totalt||0], suf:" kr"},
+  ];
+  const box=document.getElementById("kpis");
+  box.innerHTML=kpis.map((k,i)=>`<div class="kpi" style="--glow:${k.glow}"><div class="label">${k.label}</div><div class="val" id="kv${i}">0</div><canvas id="sp${i}"></canvas></div>`).join("");
+  kpis.forEach((k,i)=>{animateCount(document.getElementById("kv"+i), k.val, k.suf); spark(document.getElementById("sp"+i), k.spark.length?k.spark:[0], k.glow)});
+
+  line("cDay", L.per_dag?.labels||[], dayVals, "#22d3ee");
+  bar("cWeek", L.per_uke?.labels||[], L.per_uke?.values||[], "#a78bfa88");
+  const kom=Object.entries(L.per_kommune||{});
+  bar("cKom", kom.map(([k])=>k.replace(" kommune","")), kom.map(([,v])=>v), "#34d399aa");
   const sc=L.scorefordeling||{};
-  document.getElementById('scores').innerHTML=Object.entries(sc).map(([k,v])=>`<div class="bar"><i style="width:${Math.max(8,v*3)}%;background:var(--accent)"></i><span>${k}: <b>${v}</b></span></div>`).join('');
-  document.getElementById('okonomi').innerHTML='<tr><th>Post</th><th>Beløp</th></tr>'+(O.poster||[]).map(p=>`<tr><td>${p.post}<br><span class="muted">${p.merknad||''}</span></td><td>${p.belop} kr</td></tr>`).join('')+`<tr><td><b>Sum</b></td><td><b>${O.totalt||0} kr</b></td></tr>`;
-  document.getElementById('venter').innerHTML=(d.venter_pa_tobbiz||[]).map(x=>'<li>'+x+'</li>').join('');
-  document.getElementById('neste').innerHTML=(d.neste_steg||[]).map(x=>'<li>'+x+'</li>').join('');
-  document.getElementById('noter').textContent=d.noter||'';
+  bar("cScore", Object.keys(sc), Object.values(sc), "#fbbf24aa");
+  const fa=Object.entries(L.fasefordeling||{});
+  doughnut("cFase", fa.map(([k])=>k), fa.map(([,v])=>v));
+
+  const pp=d.plan_progress||{pct:0,ferdig:0,totalt:0};
+  document.getElementById("planPct").textContent=`${pp.ferdig||0}/${pp.totalt||0} · ${pp.pct||0}%`;
+  document.getElementById("planBar").style.width=(pp.pct||0)+"%";
+  document.getElementById("milepeler").innerHTML=(d.milepeler||[]).map(m=>`<li><span class="dot ${m.status}"></span><div><b>${m.navn}</b><div class="meta">${m.status}${m.dato?" · "+m.dato:""}</div></div></li>`).join("");
+
+  document.getElementById("lastrun").innerHTML=`
+    <span class="badge">Siste kjøring: <b>${L.siste_kjoring||"–"}</b></span>
+    <span class="badge">Pipeline: <b>${L.totalt||0}</b></span>
+    <span class="badge">MRR: <b>${d.mrr_nok||0} kr</b></span>
+    <span class="badge">Kostnader: <b>${O.totalt||0} kr</b></span>`;
+  document.getElementById("venter").innerHTML=(d.venter_pa_tobbiz||[]).map(x=>"<li>"+x+"</li>").join("")||"<li>Ingen</li>";
+  document.getElementById("neste").innerHTML=(d.neste_steg||[]).map(x=>"<li>"+x+"</li>").join("")||"<li>Ingen</li>";
 }
 </script>
 </body>
