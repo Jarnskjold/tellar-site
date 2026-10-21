@@ -1,7 +1,7 @@
 {
-  "oppdatert": "2026-10-15 18:59",
+  "oppdatert": "2026-10-21 14:13",
   "produkt": "Byggesaksvarsel for takfirma",
-  "produkt_status": "Prototype i drift – pilotrekruttering",
+  "produkt_status": "Prototype i drift – pilottilbud sendt til 5 takfirma 21.10, venter på svar",
   "milepeler": [
     {
       "id": "research",
@@ -36,8 +36,8 @@
     {
       "id": "pilot",
       "navn": "Rekruttere 3–5 pilotkunder (gratis 30 dager)",
-      "status": "planlagt",
-      "dato": null
+      "status": "pågår",
+      "dato": "2026-10-21"
     },
     {
       "id": "ukentlig",
@@ -72,7 +72,7 @@
       "Froland kommune": 20
     },
     "siste_kjoring": "2026-10-15",
-    "relevante_siste_7_dager": 63,
+    "relevante_siste_7_dager": 0,
     "scorefordeling": {
       "20–39": 275,
       "40–59": 104,
@@ -90,12 +90,6 @@
     },
     "per_dag": {
       "labels": [
-        "09-16",
-        "09-17",
-        "09-18",
-        "09-19",
-        "09-20",
-        "09-21",
         "09-22",
         "09-23",
         "09-24",
@@ -119,15 +113,15 @@
         "10-12",
         "10-13",
         "10-14",
-        "10-15"
+        "10-15",
+        "10-16",
+        "10-17",
+        "10-18",
+        "10-19",
+        "10-20",
+        "10-21"
       ],
       "values": [
-        10,
-        20,
-        16,
-        0,
-        0,
-        26,
         16,
         21,
         16,
@@ -150,6 +144,12 @@
         0,
         30,
         2,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
         0,
         0
       ]
@@ -193,13 +193,11 @@
   },
   "venter_pa_tobbiz": [
     "Formelt vedtekts-/formålsendring for Jarnskjold AS (utvide til programvare/digitale tjenester) via Altinn",
-    "Manuell sjekk av «Tellar» hos Patentstyret (klasse 35 og 42)",
-    "Godkjenne e-post til Digdir om bruk av eInnsyn-søke-API for kommersiell gjenbruk",
-    "Opprette leon@tellar.no i Uniweb og dele passord trygt",
-    "Godkjenne pilot-e-post før utsending til takfirma"
+    "Manuell sjekk av «Tellar» hos Patentstyret (klasse 35 og 42)"
   ],
   "neste_steg": [
-    "Sende pilottilbud til 10–15 takfirma (B2B) etter godkjenning",
+    "Følge opp svar på pilottilbud (sendt 21.10 til 5 takfirma)",
+    "Vente på svar fra Digdir om kommersiell gjenbruk av eInnsyn (sendt 21.10)",
     "Kjøre ukentlig lead-henting for pilotkommuner",
     "Forbedre dekning: kartlegge kommuner uten eInnsyn (direkte innsyn/Elements)",
     "Slå på Enforce HTTPS for tellar.no i GitHub Pages"
