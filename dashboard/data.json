@@ -1,5 +1,5 @@
 {
-  "oppdatert": "2026-10-24 03:11",
+  "oppdatert": "2026-10-25 03:08",
   "produkt": "Byggesaksvarsel for takfirma",
   "produkt_status": "Prototype i drift – pilottilbud sendt til 5 takfirma 21.10 (ABC-Tak har byttet adresse), venter på svar",
   "milepeler": [
@@ -61,33 +61,33 @@
   "omsetning_nok": 0,
   "mrr_nok": 0.0,
   "leads": {
-    "totalt": 890,
+    "totalt": 899,
     "per_kommune": {
-      "Stavanger kommune": 220,
+      "Stavanger kommune": 221,
       "Fredrikstad kommune": 146,
       "Arendal kommune": 91,
-      "Oslo kommune": 86,
-      "Bergen kommune": 79,
-      "Trondheim kommune": 72,
+      "Oslo kommune": 90,
+      "Bergen kommune": 81,
+      "Trondheim kommune": 73,
       "Grimstad kommune": 59,
-      "Sandnes kommune": 49,
+      "Sandnes kommune": 50,
       "Bodø kommune": 36,
       "Malvik kommune": 31,
       "Froland kommune": 21
     },
-    "siste_kjoring": "2026-10-24",
-    "relevante_siste_7_dager": 125,
+    "siste_kjoring": "2026-10-25",
+    "relevante_siste_7_dager": 135,
     "scorefordeling": {
-      "0–19": 192,
-      "20–39": 311,
-      "40–59": 102,
-      "60–79": 249,
+      "0–19": 194,
+      "20–39": 309,
+      "40–59": 110,
+      "60–79": 250,
       "80–100": 36
     },
     "fasefordeling": {
-      "Igangsettingstillatelse": 393,
+      "Igangsettingstillatelse": 398,
       "Ukjent fase": 182,
-      "Rammetillatelse": 142,
+      "Rammetillatelse": 146,
       "Søknad sendt": 117,
       "Tillatelse gitt": 27,
       "Ferdigattest": 19,
@@ -95,7 +95,6 @@
     },
     "per_dag": {
       "labels": [
-        "09-25",
         "09-26",
         "09-27",
         "09-28",
@@ -124,10 +123,10 @@
         "10-21",
         "10-22",
         "10-23",
-        "10-24"
+        "10-24",
+        "10-25"
       ],
       "values": [
-        24,
         0,
         0,
         35,
@@ -137,7 +136,7 @@
         52,
         1,
         0,
-        35,
+        34,
         54,
         53,
         34,
@@ -155,6 +154,7 @@
         32,
         17,
         16,
+        10,
         0,
         0
       ]
@@ -172,9 +172,9 @@
         42,
         128,
         189,
-        208,
+        207,
         214,
-        109
+        119
       ]
     }
   },
