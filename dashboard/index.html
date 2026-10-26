@@ -61,6 +61,11 @@ a{color:var(--cyan)}
 .progress{height:8px;background:#0a1220;border-radius:99px;overflow:hidden;margin:8px 0 4px}
 .progress i{display:block;height:100%;background:linear-gradient(90deg,var(--cyan),var(--violet));border-radius:99px}
 .note{color:var(--muted);font-size:.78rem;margin-top:14px}
+.tbl-wrap{overflow-x:auto}
+.tbl{width:100%;border-collapse:collapse;font-size:.85rem}
+.tbl th{text-align:left;color:var(--muted);font-weight:600;font-size:.75rem;text-transform:uppercase;letter-spacing:.06em;padding:6px 8px;border-bottom:1px solid var(--border)}
+.tbl td{padding:7px 8px;border-bottom:1px solid #15213a;vertical-align:top}
+.tbl td.num{font-variant-numeric:tabular-nums;color:var(--green);font-weight:700}
 @media(max-width:980px){.kpis{grid-template-columns:repeat(2,1fr)}.grid,.grid3{grid-template-columns:1fr}.kpi:last-child{grid-column:1/-1}}
 @media(max-width:520px){.kpis{grid-template-columns:1fr}}
 </style>
@@ -118,22 +123,35 @@ a{color:var(--cyan)}
       </section>
     </div>
 
+    <section class="panel" style="margin-bottom:12px">
+      <h2>Topp leads <span>anonymisert · høyest score først</span></h2>
+      <div class="tbl-wrap"><table class="tbl">
+        <thead><tr><th>Score</th><th>Dato</th><th>Kommune</th><th>Type</th><th>Fase</th></tr></thead>
+        <tbody id="toppRows"><tr><td colspan="5">–</td></tr></tbody>
+      </table></div>
+    </section>
+
+    <section class="panel" style="margin-bottom:12px">
+      <h2>Bygging starter nå <span id="igMeta">igangsettingstillatelser · høyest score først</span></h2>
+      <div class="tbl-wrap"><table class="tbl">
+        <thead><tr><th>Score</th><th>Dato</th><th>Kommune</th><th>Type</th><th>Fase</th></tr></thead>
+        <tbody id="igRows"><tr><td colspan="5">–</td></tr></tbody>
+      </table></div>
+    </section>
+
     <div class="grid">
       <section class="panel">
         <h2>30-dagers plan <span id="planPct"></span></h2>
         <div class="progress"><i id="planBar" style="width:0%"></i></div>
-        <ul class="timeline" id="milepeler"></ul>
+        <div class="status-row" id="milepeler"></div>
       </section>
       <section class="panel">
         <h2>Siste kjøring</h2>
         <div class="status-row" id="lastrun"></div>
-        <h2 style="margin-top:22px">Venter på Tobbiz</h2>
-        <ul class="list" id="venter"></ul>
-        <h2 style="margin-top:22px">Neste steg</h2>
-        <ul class="list" id="neste"></ul>
+        <h2 style="margin-top:22px">Oppgaver</h2>
+        <div class="status-row" id="oppgaver"></div>
       </section>
     </div>
-    <p class="note" id="noter"></p>
     <p class="note">Tellar er et varemerke under Jarnskjold AS, org.nr 989 222 848 · Oppdatert <span id="oppdatert">–</span></p>
     <p class="note">Data om nybygg: <a href="https://www.kartverket.no/">© Kartverket</a> (CC BY 4.0)</p>
   </div>
@@ -197,9 +215,7 @@ function doughnut(id, labels, values){
 
 async function load(){
   const d=await (await fetch("data.json",{cache:"no-store"})).json();
-  document.getElementById("produkt").textContent=d.produkt_status||d.produkt||"";
   document.getElementById("oppdatert").textContent=d.oppdatert||"–";
-  document.getElementById("noter").textContent=d.noter||"";
   const L=d.leads||{}, O=d.okonomi||{};
   const dayVals=L.per_dag?.values||[];
   const kpis=[
@@ -222,18 +238,24 @@ async function load(){
   const fa=Object.entries(L.fasefordeling||{});
   doughnut("cFase", fa.map(([k])=>k), fa.map(([,v])=>v));
 
+  const esc=x=>String(x??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+  const IG=L.bygging_starter_na||{liste:[]};
+  document.getElementById("igMeta").textContent=`${IG.antall||0} igangsettinger · ${IG.siste_14_dager||0} siste 14 dager · høyest score først`;
+  const rad=r=>`<tr><td class="num">${esc(r.score)}</td><td>${esc(r.dato)}</td><td>${esc(r.kommune)}</td><td>${esc(r.type)}</td><td>${esc(r.fase)}</td></tr>`;
+  document.getElementById("igRows").innerHTML=(IG.liste||[]).map(rad).join("")||'<tr><td colspan="5">Ingen igangsettinger nå</td></tr>';
+  document.getElementById("toppRows").innerHTML=(L.topp||[]).map(rad).join("")||'<tr><td colspan="5">Ingen leads</td></tr>';
+
   const pp=d.plan_progress||{pct:0,ferdig:0,totalt:0};
   document.getElementById("planPct").textContent=`${pp.ferdig||0}/${pp.totalt||0} · ${pp.pct||0}%`;
   document.getElementById("planBar").style.width=(pp.pct||0)+"%";
-  document.getElementById("milepeler").innerHTML=(d.milepeler||[]).map(m=>`<li><span class="dot ${m.status}"></span><div><b>${m.navn}</b><div class="meta">${m.status}${m.dato?" · "+m.dato:""}</div></div></li>`).join("");
+  document.getElementById("milepeler").innerHTML=`<span class="badge">Ferdig: <b>${esc(pp.ferdig||0)}</b></span><span class="badge">Pågår: <b>${esc(pp["pågår"]||0)}</b></span><span class="badge">Planlagt: <b>${esc(pp.planlagt||0)}</b></span>`;
 
   document.getElementById("lastrun").innerHTML=`
     <span class="badge">Siste kjøring: <b>${L.siste_kjoring||"–"}</b></span>
     <span class="badge">Pipeline: <b>${L.totalt||0}</b></span>
     <span class="badge">MRR: <b>${d.mrr_nok||0} kr</b></span>
     <span class="badge">Kostnader: <b>${O.totalt||0} kr</b></span>`;
-  document.getElementById("venter").innerHTML=(d.venter_pa_tobbiz||[]).map(x=>"<li>"+x+"</li>").join("")||"<li>Ingen</li>";
-  document.getElementById("neste").innerHTML=(d.neste_steg||[]).map(x=>"<li>"+x+"</li>").join("")||"<li>Ingen</li>";
+  document.getElementById("oppgaver").innerHTML=`<span class="badge">Venter på Tobbiz: <b>${esc(d.venter_pa_tobbiz_antall||0)}</b></span><span class="badge">Neste steg: <b>${esc(d.neste_steg_antall||0)}</b></span>`;
 }
 </script>
 </body>

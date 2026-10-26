@@ -1,98 +1,167 @@
 {
-  "oppdatert": "2026-10-26 08:41",
-  "produkt": "Byggesaksvarsel for takfirma",
-  "produkt_status": "Prototype i drift – pilottilbud sendt til 5 takfirma 21.10 og 14 nye takfirma 26.10 (personlige e-poster med eksempelleads), venter på svar",
-  "milepeler": [
-    {
-      "id": "research",
-      "navn": "Markedsresearch og forretningside",
-      "status": "ferdig",
-      "dato": "2026-10-15"
-    },
-    {
-      "id": "navn",
-      "navn": "Merkevaren Tellar valgt, tellar.no kjøpt",
-      "status": "ferdig",
-      "dato": "2026-10-15"
-    },
-    {
-      "id": "nettside",
-      "navn": "Landingsside publisert på tellar.no",
-      "status": "ferdig",
-      "dato": "2026-10-15"
-    },
-    {
-      "id": "prototype",
-      "navn": "Lead-prototype (eInnsyn → score → CSV)",
-      "status": "ferdig",
-      "dato": "2026-10-15"
-    },
-    {
-      "id": "dashboard",
-      "navn": "Internt statusdashboard",
-      "status": "ferdig",
-      "dato": "2026-10-15"
-    },
-    {
-      "id": "pilot",
-      "navn": "Rekruttere 3–5 pilotkunder (gratis 30 dager)",
-      "status": "pågår",
-      "dato": "2026-10-21"
-    },
-    {
-      "id": "ukentlig",
-      "navn": "Automatisk ukentlig rapport på e-post",
-      "status": "planlagt",
-      "dato": null
-    },
-    {
-      "id": "betaling",
-      "navn": "Betaling/Stripe etter pilot",
-      "status": "planlagt",
-      "dato": null
-    }
-  ],
+  "oppdatert": "2026-10-26 14:01",
   "plan_progress": {
     "ferdig": 5,
     "totalt": 8,
-    "pct": 62
+    "pct": 62,
+    "pågår": 1,
+    "planlagt": 2
   },
   "pilotkunder": 0,
   "omsetning_nok": 0,
   "mrr_nok": 0.0,
   "leads": {
-    "totalt": 903,
+    "totalt": 811,
     "per_kommune": {
-      "Stavanger kommune": 221,
-      "Fredrikstad kommune": 147,
-      "Arendal kommune": 91,
-      "Oslo kommune": 90,
-      "Bergen kommune": 81,
-      "Trondheim kommune": 73,
-      "Grimstad kommune": 59,
-      "Sandnes kommune": 50,
-      "Bodø kommune": 38,
-      "Malvik kommune": 32,
-      "Froland kommune": 21
+      "Stavanger": 208,
+      "Fredrikstad": 146,
+      "Arendal": 87,
+      "Oslo": 74,
+      "Bergen": 72,
+      "Grimstad": 54,
+      "Trondheim": 52,
+      "Bodø": 37,
+      "Malvik": 31,
+      "Sandnes": 29,
+      "Froland": 21
     },
     "siste_kjoring": "2026-10-26",
-    "relevante_siste_7_dager": 121,
+    "relevante_siste_7_dager": 112,
     "scorefordeling": {
-      "0–19": 199,
-      "20–39": 307,
-      "40–59": 114,
-      "60–79": 249,
-      "80–100": 34
+      "0–19": 194,
+      "20–39": 254,
+      "40–59": 219,
+      "60–79": 122,
+      "80–100": 22
     },
     "fasefordeling": {
-      "Igangsettingstillatelse": 402,
-      "Ukjent fase": 181,
-      "Rammetillatelse": 146,
-      "Søknad sendt": 118,
+      "Igangsettingstillatelse": 346,
+      "Ukjent fase": 177,
+      "Søknad sendt": 117,
+      "Rammetillatelse": 115,
       "Tillatelse gitt": 27,
       "Ferdigattest": 19,
       "Forhåndskonferanse": 10
     },
+    "typefordeling": {
+      "Nybygg": 242,
+      "Garasje/carport": 175,
+      "Tilbygg": 149,
+      "Annet": 80,
+      "Bolig": 75,
+      "Påbygg": 50,
+      "Annet takarbeid": 19,
+      "Takterrasse": 8,
+      "Tak – omlegging/nytt tak": 7,
+      "Takform/kvist/takløft": 6
+    },
+    "topp": [
+      {
+        "kommune": "Stavanger",
+        "type": "Takform/kvist/takløft",
+        "fase": "Søknad sendt",
+        "score": 92,
+        "dato": "2026-10-20"
+      },
+      {
+        "kommune": "Arendal",
+        "type": "Tak – omlegging/nytt tak",
+        "fase": "Tillatelse gitt",
+        "score": 90,
+        "dato": "2026-10-14"
+      },
+      {
+        "kommune": "Stavanger",
+        "type": "Påbygg",
+        "fase": "Søknad sendt",
+        "score": 89,
+        "dato": "2026-10-15"
+      },
+      {
+        "kommune": "Fredrikstad",
+        "type": "Påbygg",
+        "fase": "Søknad sendt",
+        "score": 89,
+        "dato": "2026-10-15"
+      },
+      {
+        "kommune": "Fredrikstad",
+        "type": "Påbygg",
+        "fase": "Søknad sendt",
+        "score": 88,
+        "dato": "2026-10-20"
+      },
+      {
+        "kommune": "Stavanger",
+        "type": "Takform/kvist/takløft",
+        "fase": "Tillatelse gitt",
+        "score": 88,
+        "dato": "2026-10-09"
+      },
+      {
+        "kommune": "Malvik",
+        "type": "Påbygg",
+        "fase": "Rammetillatelse",
+        "score": 87,
+        "dato": "2026-10-01"
+      },
+      {
+        "kommune": "Stavanger",
+        "type": "Påbygg",
+        "fase": "Rammetillatelse",
+        "score": 87,
+        "dato": "2026-09-28"
+      },
+      {
+        "kommune": "Oslo",
+        "type": "Nybygg",
+        "fase": "Rammetillatelse",
+        "score": 86,
+        "dato": "2026-10-23"
+      },
+      {
+        "kommune": "Oslo",
+        "type": "Nybygg",
+        "fase": "Rammetillatelse",
+        "score": 86,
+        "dato": "2026-10-23"
+      },
+      {
+        "kommune": "Oslo",
+        "type": "Nybygg",
+        "fase": "Rammetillatelse",
+        "score": 86,
+        "dato": "2026-10-21"
+      },
+      {
+        "kommune": "Trondheim",
+        "type": "Nybygg",
+        "fase": "Rammetillatelse",
+        "score": 86,
+        "dato": "2026-10-21"
+      },
+      {
+        "kommune": "Stavanger",
+        "type": "Påbygg",
+        "fase": "Søknad sendt",
+        "score": 85,
+        "dato": "2026-09-30"
+      },
+      {
+        "kommune": "Fredrikstad",
+        "type": "Påbygg",
+        "fase": "Søknad sendt",
+        "score": 82,
+        "dato": "2026-10-20"
+      },
+      {
+        "kommune": "Stavanger",
+        "type": "Nybygg",
+        "fase": "Rammetillatelse",
+        "score": 82,
+        "dato": "2026-10-14"
+      }
+    ],
     "per_dag": {
       "labels": [
         "09-27",
@@ -128,31 +197,31 @@
       ],
       "values": [
         0,
-        34,
-        26,
+        32,
+        24,
         30,
+        41,
         45,
-        52,
         1,
         0,
-        34,
-        54,
-        53,
-        34,
-        32,
-        0,
-        0,
-        41,
-        35,
-        37,
-        52,
+        33,
+        40,
+        36,
+        31,
         30,
         0,
-        19,
-        43,
-        32,
-        19,
-        20,
+        0,
+        39,
+        33,
+        34,
+        44,
+        29,
+        0,
+        12,
+        42,
+        30,
+        18,
+        15,
         10,
         0,
         0,
@@ -170,42 +239,130 @@
       ],
       "values": [
         42,
-        128,
-        188,
-        207,
-        214,
-        124
+        120,
+        173,
+        170,
+        191,
+        115
+      ]
+    },
+    "scoring": "v3",
+    "bygging_starter_na": {
+      "antall": 346,
+      "siste_14_dager": 132,
+      "liste": [
+        {
+          "kommune": "Stavanger",
+          "type": "Nybygg",
+          "fase": "Igangsettingstillatelse",
+          "score": 65,
+          "dato": "2026-10-22"
+        },
+        {
+          "kommune": "Bodø",
+          "type": "Nybygg",
+          "fase": "Igangsettingstillatelse",
+          "score": 65,
+          "dato": "2026-10-22"
+        },
+        {
+          "kommune": "Bodø",
+          "type": "Nybygg",
+          "fase": "Igangsettingstillatelse",
+          "score": 65,
+          "dato": "2026-10-22"
+        },
+        {
+          "kommune": "Malvik",
+          "type": "Nybygg",
+          "fase": "Igangsettingstillatelse",
+          "score": 65,
+          "dato": "2026-10-22"
+        },
+        {
+          "kommune": "Oslo",
+          "type": "Nybygg",
+          "fase": "Igangsettingstillatelse",
+          "score": 65,
+          "dato": "2026-10-22"
+        },
+        {
+          "kommune": "Oslo",
+          "type": "Nybygg",
+          "fase": "Igangsettingstillatelse",
+          "score": 65,
+          "dato": "2026-10-22"
+        },
+        {
+          "kommune": "Oslo",
+          "type": "Nybygg",
+          "fase": "Igangsettingstillatelse",
+          "score": 65,
+          "dato": "2026-10-22"
+        },
+        {
+          "kommune": "Oslo",
+          "type": "Nybygg",
+          "fase": "Igangsettingstillatelse",
+          "score": 65,
+          "dato": "2026-10-21"
+        },
+        {
+          "kommune": "Trondheim",
+          "type": "Nybygg",
+          "fase": "Igangsettingstillatelse",
+          "score": 65,
+          "dato": "2026-10-21"
+        },
+        {
+          "kommune": "Sandnes",
+          "type": "Nybygg",
+          "fase": "Igangsettingstillatelse",
+          "score": 65,
+          "dato": "2026-10-21"
+        },
+        {
+          "kommune": "Stavanger",
+          "type": "Nybygg",
+          "fase": "Igangsettingstillatelse",
+          "score": 65,
+          "dato": "2026-10-21"
+        },
+        {
+          "kommune": "Trondheim",
+          "type": "Nybygg",
+          "fase": "Igangsettingstillatelse",
+          "score": 65,
+          "dato": "2026-10-20"
+        },
+        {
+          "kommune": "Grimstad",
+          "type": "Nybygg",
+          "fase": "Igangsettingstillatelse",
+          "score": 65,
+          "dato": "2026-10-19"
+        },
+        {
+          "kommune": "Grimstad",
+          "type": "Nybygg",
+          "fase": "Igangsettingstillatelse",
+          "score": 65,
+          "dato": "2026-10-19"
+        },
+        {
+          "kommune": "Fredrikstad",
+          "type": "Nybygg",
+          "fase": "Igangsettingstillatelse",
+          "score": 65,
+          "dato": "2026-10-19"
+        }
       ]
     }
   },
   "okonomi": {
-    "poster": [
-      {
-        "post": "tellar.no (Uniweb, 1. år)",
-        "belop": 7.5,
-        "merknad": "Tilbudspris 6 kr + mva"
-      },
-      {
-        "post": "E-post Essential (Uniweb, 1. år)",
-        "belop": 180,
-        "merknad": "Halv pris første år, ca. 15 kr/mnd + mva ≈ 180 kr/år"
-      },
-      {
-        "post": "GitHub Pages",
-        "belop": 0,
-        "merknad": "Gratis"
-      }
-    ],
+    "antall_poster": 3,
     "totalt": 187.5
   },
-  "venter_pa_tobbiz": [
-    "Godkjenne ny utsendelse av pilot-e-post til ABC-Tak på ny adresse post@abc-tak.no"
-  ],
-  "neste_steg": [
-    "Følge opp svar på pilottilbud (5 firma 21.10, 14 firma 26.10)",
-    "Følge Digdirs råd: én nattlig kjøring i døgnet, User-Agent med navn og kontaktadresse (Tellar, leon@tellar.no)",
-    "Kjøre ukentlig lead-henting for pilotkommuner",
-    "Forbedre dekning: kartlegge kommuner uten eInnsyn (direkte innsyn/Elements)"
-  ],
-  "noter": "Mange større kommuner (Oslo, Bergen, Trondheim, Sandnes m.fl.) publiserer ikke byggesaker i eInnsyn – kun de kommunene vi har enhet-ID for dekkes i dag. Digdir svarte 21.10: eInnsyn-API er åpent uten nøkkel, upubliserte rate limits som vårt behov ikke skal treffe; anbefaler nattlig kjøring 1x/døgn og navn+kontakt i User-Agent; API kan endres senere. Lisens/kommersiell bruk ble ikke eksplisitt kommentert. Varemerke (22.10): ingen TELLAR-registrering funnet; Nets har TELLER i kl. 35/42 (middels risiko). Registrering (4 800 kr) utsatt til vi skalerer markedsføring. HTTPS er påtvunget på tellar.no."
+  "venter_pa_tobbiz_antall": 1,
+  "neste_steg_antall": 4
 }
