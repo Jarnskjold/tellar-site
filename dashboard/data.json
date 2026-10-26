@@ -1,7 +1,7 @@
 {
-  "oppdatert": "2026-10-26 03:07",
+  "oppdatert": "2026-10-26 08:41",
   "produkt": "Byggesaksvarsel for takfirma",
-  "produkt_status": "Prototype i drift – pilottilbud sendt til 5 takfirma 21.10 (ABC-Tak har byttet adresse), venter på svar",
+  "produkt_status": "Prototype i drift – pilottilbud sendt til 5 takfirma 21.10 og 14 nye takfirma 26.10 (personlige e-poster med eksempelleads), venter på svar",
   "milepeler": [
     {
       "id": "research",
@@ -199,11 +199,10 @@
     "totalt": 187.5
   },
   "venter_pa_tobbiz": [
-    "Formelt vedtekts-/formålsendring for Jarnskjold AS (utvide til programvare/digitale tjenester) via Altinn",
     "Godkjenne ny utsendelse av pilot-e-post til ABC-Tak på ny adresse post@abc-tak.no"
   ],
   "neste_steg": [
-    "Følge opp svar på pilottilbud (sendt 21.10 til 5 takfirma)",
+    "Følge opp svar på pilottilbud (5 firma 21.10, 14 firma 26.10)",
     "Følge Digdirs råd: én nattlig kjøring i døgnet, User-Agent med navn og kontaktadresse (Tellar, leon@tellar.no)",
     "Kjøre ukentlig lead-henting for pilotkommuner",
     "Forbedre dekning: kartlegge kommuner uten eInnsyn (direkte innsyn/Elements)"
