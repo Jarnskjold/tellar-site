@@ -1,5 +1,5 @@
 {
-  "oppdatert": "2026-10-31 03:08",
+  "oppdatert": "2026-11-01 03:09",
   "plan_progress": {
     "ferdig": 5,
     "totalt": 8,
@@ -21,18 +21,18 @@
       "Grimstad": 60,
       "Trondheim": 56,
       "Bodø": 42,
-      "Malvik": 35,
       "Sandnes": 35,
+      "Malvik": 35,
       "Froland": 21
     },
-    "siste_kjoring": "2026-10-31",
+    "siste_kjoring": "2026-11-01",
     "relevante_siste_7_dager": 98,
     "scorefordeling": {
-      "0–19": 220,
-      "20–39": 283,
-      "40–59": 252,
-      "60–79": 135,
-      "80–100": 23
+      "0–19": 225,
+      "20–39": 286,
+      "40–59": 246,
+      "60–79": 134,
+      "80–100": 22
     },
     "fasefordeling": {
       "Igangsettingstillatelse": 390,
@@ -90,13 +90,6 @@
         "fase": "Tillatelse gitt",
         "score": 88,
         "dato": "2026-10-09"
-      },
-      {
-        "kommune": "Malvik",
-        "type": "Påbygg",
-        "fase": "Rammetillatelse",
-        "score": 87,
-        "dato": "2026-10-01"
       },
       {
         "kommune": "Oslo",
@@ -160,11 +153,17 @@
         "fase": "Søknad sendt",
         "score": 82,
         "dato": "2026-10-27"
+      },
+      {
+        "kommune": "Stavanger",
+        "type": "Påbygg",
+        "fase": "Søknad sendt",
+        "score": 82,
+        "dato": "2026-10-26"
       }
     ],
     "per_dag": {
       "labels": [
-        "10-02",
         "10-03",
         "10-04",
         "10-05",
@@ -193,10 +192,10 @@
         "10-28",
         "10-29",
         "10-30",
-        "10-31"
+        "10-31",
+        "11-01"
       ],
       "values": [
-        44,
         1,
         0,
         30,
@@ -224,6 +223,7 @@
         45,
         12,
         11,
+        0,
         0,
         0
       ]
