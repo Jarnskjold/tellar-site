@@ -1,5 +1,5 @@
 {
-  "oppdatert": "2026-11-02 03:19",
+  "oppdatert": "2026-11-03 03:11",
   "plan_progress": {
     "ferdig": 5,
     "totalt": 8,
@@ -11,46 +11,46 @@
   "omsetning_nok": 0,
   "mrr_nok": 0.0,
   "leads": {
-    "totalt": 920,
+    "totalt": 929,
     "per_kommune": {
-      "Stavanger": 237,
-      "Fredrikstad": 169,
-      "Arendal": 94,
+      "Stavanger": 238,
+      "Fredrikstad": 172,
+      "Arendal": 95,
       "Oslo": 87,
       "Bergen": 84,
-      "Grimstad": 60,
+      "Grimstad": 61,
       "Trondheim": 56,
-      "Bodø": 42,
+      "Bodø": 44,
       "Sandnes": 35,
       "Malvik": 35,
-      "Froland": 21
+      "Froland": 22
     },
-    "siste_kjoring": "2026-11-02",
-    "relevante_siste_7_dager": 107,
+    "siste_kjoring": "2026-11-03",
+    "relevante_siste_7_dager": 93,
     "scorefordeling": {
-      "0–19": 234,
-      "20–39": 285,
-      "40–59": 248,
-      "60–79": 131,
-      "80–100": 22
+      "0–19": 236,
+      "20–39": 296,
+      "40–59": 249,
+      "60–79": 128,
+      "80–100": 20
     },
     "fasefordeling": {
-      "Igangsettingstillatelse": 391,
-      "Ukjent fase": 203,
-      "Søknad sendt": 133,
+      "Igangsettingstillatelse": 392,
+      "Ukjent fase": 209,
+      "Søknad sendt": 134,
       "Rammetillatelse": 131,
-      "Tillatelse gitt": 31,
+      "Tillatelse gitt": 32,
       "Ferdigattest": 19,
       "Forhåndskonferanse": 12
     },
     "typefordeling": {
-      "Nybygg": 278,
-      "Garasje/carport": 199,
-      "Tilbygg": 167,
+      "Nybygg": 279,
+      "Garasje/carport": 200,
+      "Tilbygg": 173,
       "Annet": 86,
       "Bolig": 81,
       "Påbygg": 61,
-      "Annet takarbeid": 23,
+      "Annet takarbeid": 24,
       "Tak – omlegging/nytt tak": 9,
       "Takterrasse": 9,
       "Takform/kvist/takløft": 7
@@ -67,7 +67,7 @@
         "kommune": "Stavanger",
         "type": "Påbygg",
         "fase": "Søknad sendt",
-        "score": 93,
+        "score": 89,
         "dato": "2026-10-26"
       },
       {
@@ -113,13 +113,6 @@
         "dato": "2026-10-27"
       },
       {
-        "kommune": "Bergen",
-        "type": "Nybygg",
-        "fase": "Rammetillatelse",
-        "score": 86,
-        "dato": "2026-10-26"
-      },
-      {
         "kommune": "Arendal",
         "type": "Tak – omlegging/nytt tak",
         "fase": "Tillatelse gitt",
@@ -155,16 +148,22 @@
         "dato": "2026-10-27"
       },
       {
-        "kommune": "Stavanger",
-        "type": "Påbygg",
-        "fase": "Søknad sendt",
+        "kommune": "Bergen",
+        "type": "Nybygg",
+        "fase": "Rammetillatelse",
         "score": 82,
         "dato": "2026-10-26"
+      },
+      {
+        "kommune": "Oslo",
+        "type": "Nybygg",
+        "fase": "Rammetillatelse",
+        "score": 82,
+        "dato": "2026-10-23"
       }
     ],
     "per_dag": {
       "labels": [
-        "10-04",
         "10-05",
         "10-06",
         "10-07",
@@ -193,10 +192,10 @@
         "10-30",
         "10-31",
         "11-01",
-        "11-02"
+        "11-02",
+        "11-03"
       ],
       "values": [
-        0,
         30,
         38,
         35,
@@ -214,14 +213,15 @@
         39,
         22,
         21,
-        32,
-        37,
+        30,
+        35,
         0,
         1,
         29,
-        45,
-        22,
-        11,
+        46,
+        30,
+        16,
+        1,
         0,
         0,
         0,
@@ -240,18 +240,18 @@
       ],
       "values": [
         41,
-        120,
+        118,
         163,
         164,
         173,
-        152,
-        107
+        148,
+        122
       ]
     },
     "scoring": "v3",
     "bygging_starter_na": {
-      "antall": 391,
-      "siste_14_dager": 103,
+      "antall": 392,
+      "siste_14_dager": 91,
       "liste": [
         {
           "kommune": "Oslo",
@@ -355,7 +355,7 @@
           "kommune": "Stavanger",
           "type": "Nybygg",
           "fase": "Igangsettingstillatelse",
-          "score": 65,
+          "score": 61,
           "dato": "2026-10-26"
         }
       ]
