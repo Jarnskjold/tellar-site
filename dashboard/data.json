@@ -1,5 +1,5 @@
 {
-  "oppdatert": "2026-11-06 03:04",
+  "oppdatert": "2026-11-07 03:08",
   "plan_progress": {
     "ferdig": 5,
     "totalt": 8,
@@ -11,33 +11,33 @@
   "omsetning_nok": 0,
   "mrr_nok": 0.0,
   "leads": {
-    "totalt": 979,
+    "totalt": 984,
     "per_kommune": {
-      "Stavanger": 253,
+      "Stavanger": 256,
       "Fredrikstad": 187,
       "Arendal": 97,
       "Oslo": 92,
       "Bergen": 89,
-      "Grimstad": 63,
+      "Grimstad": 65,
       "Trondheim": 56,
       "Bodø": 49,
       "Malvik": 35,
       "Sandnes": 35,
       "Froland": 23
     },
-    "siste_kjoring": "2026-11-06",
-    "relevante_siste_7_dager": 82,
+    "siste_kjoring": "2026-11-07",
+    "relevante_siste_7_dager": 68,
     "scorefordeling": {
-      "0–19": 257,
-      "20–39": 321,
-      "40–59": 259,
-      "60–79": 119,
-      "80–100": 23
+      "0–19": 267,
+      "20–39": 319,
+      "40–59": 260,
+      "60–79": 117,
+      "80–100": 21
     },
     "fasefordeling": {
       "Igangsettingstillatelse": 408,
-      "Ukjent fase": 222,
-      "Søknad sendt": 146,
+      "Ukjent fase": 226,
+      "Søknad sendt": 147,
       "Rammetillatelse": 135,
       "Tillatelse gitt": 36,
       "Ferdigattest": 19,
@@ -46,10 +46,10 @@
     "typefordeling": {
       "Nybygg": 289,
       "Garasje/carport": 209,
-      "Tilbygg": 183,
+      "Tilbygg": 185,
       "Annet": 94,
-      "Bolig": 85,
-      "Påbygg": 64,
+      "Bolig": 87,
+      "Påbygg": 65,
       "Annet takarbeid": 26,
       "Takterrasse": 12,
       "Tak – omlegging/nytt tak": 10,
@@ -60,8 +60,15 @@
         "kommune": "Stavanger",
         "type": "Påbygg",
         "fase": "Søknad sendt",
-        "score": 89,
-        "dato": "2026-10-27"
+        "score": 93,
+        "dato": "2026-11-03"
+      },
+      {
+        "kommune": "Stavanger",
+        "type": "Påbygg",
+        "fase": "Søknad sendt",
+        "score": 93,
+        "dato": "2026-11-03"
       },
       {
         "kommune": "Stavanger",
@@ -127,13 +134,6 @@
         "dato": "2026-11-02"
       },
       {
-        "kommune": "Stavanger",
-        "type": "Påbygg",
-        "fase": "Søknad sendt",
-        "score": 82,
-        "dato": "2026-10-30"
-      },
-      {
         "kommune": "Oslo",
         "type": "Nybygg",
         "fase": "Rammetillatelse",
@@ -164,7 +164,6 @@
     ],
     "per_dag": {
       "labels": [
-        "10-08",
         "10-09",
         "10-10",
         "10-11",
@@ -193,37 +192,38 @@
         "11-03",
         "11-04",
         "11-05",
-        "11-06"
+        "11-06",
+        "11-07"
       ],
       "values": [
-        30,
         29,
         0,
         0,
         37,
         30,
         26,
-        39,
+        38,
         26,
         0,
         10,
         39,
         18,
         21,
-        29,
+        28,
         35,
         0,
         1,
-        27,
-        42,
+        25,
+        41,
         29,
         18,
-        25,
+        24,
         1,
         0,
         25,
-        26,
+        37,
         5,
+        0,
         0,
         0
       ]
@@ -244,16 +244,16 @@
         115,
         157,
         159,
-        168,
-        143,
+        167,
         142,
-        56
+        138,
+        67
       ]
     },
     "scoring": "v3",
     "bygging_starter_na": {
       "antall": 408,
-      "siste_14_dager": 86,
+      "siste_14_dager": 73,
       "liste": [
         {
           "kommune": "Bergen",
