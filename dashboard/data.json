@@ -1,5 +1,5 @@
 {
-  "oppdatert": "2026-11-14 03:40",
+  "oppdatert": "2026-11-15 03:37",
   "plan_progress": {
     "ferdig": 5,
     "totalt": 8,
@@ -25,14 +25,14 @@
       "Sandnes": 35,
       "Froland": 23
     },
-    "siste_kjoring": "2026-11-14",
+    "siste_kjoring": "2026-11-15",
     "relevante_siste_7_dager": 62,
     "scorefordeling": {
-      "0–19": 314,
-      "20–39": 344,
-      "40–59": 267,
+      "0–19": 322,
+      "20–39": 342,
+      "40–59": 263,
       "60–79": 106,
-      "80–100": 17
+      "80–100": 15
     },
     "fasefordeling": {
       "Igangsettingstillatelse": 417,
@@ -120,20 +120,6 @@
         "dato": "2026-10-22"
       },
       {
-        "kommune": "Stavanger",
-        "type": "Påbygg",
-        "fase": "Søknad sendt",
-        "score": 85,
-        "dato": "2026-10-15"
-      },
-      {
-        "kommune": "Fredrikstad",
-        "type": "Påbygg",
-        "fase": "Søknad sendt",
-        "score": 85,
-        "dato": "2026-10-15"
-      },
-      {
         "kommune": "Arendal",
         "type": "Påbygg",
         "fase": "Rammetillatelse",
@@ -160,11 +146,24 @@
         "fase": "Søknad sendt",
         "score": 82,
         "dato": "2026-11-10"
+      },
+      {
+        "kommune": "Fredrikstad",
+        "type": "Påbygg",
+        "fase": "Søknad sendt",
+        "score": 82,
+        "dato": "2026-11-10"
+      },
+      {
+        "kommune": "Stavanger",
+        "type": "Påbygg",
+        "fase": "Tillatelse gitt",
+        "score": 82,
+        "dato": "2026-11-05"
       }
     ],
     "per_dag": {
       "labels": [
-        "10-16",
         "10-17",
         "10-18",
         "10-19",
@@ -193,10 +192,10 @@
         "11-11",
         "11-12",
         "11-13",
-        "11-14"
+        "11-14",
+        "11-15"
       ],
       "values": [
-        25,
         0,
         10,
         37,
@@ -223,6 +222,7 @@
         32,
         29,
         1,
+        0,
         0,
         0,
         0
