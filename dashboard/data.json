@@ -1,5 +1,5 @@
 {
-  "oppdatert": "2026-11-19 03:34",
+  "oppdatert": "2026-11-20 03:50",
   "plan_progress": {
     "ferdig": 5,
     "totalt": 8,
@@ -11,44 +11,44 @@
   "omsetning_nok": 0,
   "mrr_nok": 0.0,
   "leads": {
-    "totalt": 1116,
+    "totalt": 1133,
     "per_kommune": {
-      "Stavanger": 292,
-      "Fredrikstad": 213,
-      "Arendal": 111,
-      "Oslo": 104,
-      "Bergen": 95,
-      "Grimstad": 82,
-      "Trondheim": 58,
+      "Stavanger": 294,
+      "Fredrikstad": 215,
+      "Arendal": 113,
+      "Oslo": 107,
+      "Bergen": 97,
+      "Grimstad": 84,
+      "Trondheim": 62,
       "Bodø": 55,
       "Sandnes": 40,
       "Malvik": 39,
       "Froland": 27
     },
-    "siste_kjoring": "2026-11-19",
-    "relevante_siste_7_dager": 90,
+    "siste_kjoring": "2026-11-20",
+    "relevante_siste_7_dager": 102,
     "scorefordeling": {
-      "0–19": 344,
-      "20–39": 369,
+      "0–19": 353,
+      "20–39": 372,
       "40–59": 271,
-      "60–79": 110,
-      "80–100": 22
+      "60–79": 116,
+      "80–100": 21
     },
     "fasefordeling": {
-      "Igangsettingstillatelse": 456,
-      "Ukjent fase": 259,
+      "Igangsettingstillatelse": 467,
+      "Ukjent fase": 263,
       "Søknad sendt": 176,
-      "Rammetillatelse": 145,
-      "Tillatelse gitt": 46,
+      "Rammetillatelse": 146,
+      "Tillatelse gitt": 47,
       "Ferdigattest": 19,
       "Forhåndskonferanse": 15
     },
     "typefordeling": {
-      "Nybygg": 315,
-      "Garasje/carport": 245,
-      "Tilbygg": 211,
-      "Annet": 105,
-      "Bolig": 101,
+      "Nybygg": 323,
+      "Garasje/carport": 250,
+      "Tilbygg": 212,
+      "Annet": 106,
+      "Bolig": 103,
       "Påbygg": 80,
       "Annet takarbeid": 28,
       "Takterrasse": 12,
@@ -74,7 +74,7 @@
         "kommune": "Stavanger",
         "type": "Påbygg",
         "fase": "Søknad sendt",
-        "score": 93,
+        "score": 89,
         "dato": "2026-11-12"
       },
       {
@@ -104,6 +104,13 @@
         "fase": "Søknad sendt",
         "score": 89,
         "dato": "2026-11-09"
+      },
+      {
+        "kommune": "Bergen",
+        "type": "Nybygg",
+        "fase": "Rammetillatelse",
+        "score": 86,
+        "dato": "2026-11-18"
       },
       {
         "kommune": "Grimstad",
@@ -148,13 +155,6 @@
         "dato": "2026-10-22"
       },
       {
-        "kommune": "Stavanger",
-        "type": "Takform/kvist/takløft",
-        "fase": "Søknad sendt",
-        "score": 84,
-        "dato": "2026-10-20"
-      },
-      {
         "kommune": "Fredrikstad",
         "type": "Påbygg",
         "fase": "Søknad sendt",
@@ -164,7 +164,6 @@
     ],
     "per_dag": {
       "labels": [
-        "10-21",
         "10-22",
         "10-23",
         "10-24",
@@ -193,37 +192,38 @@
         "11-16",
         "11-17",
         "11-18",
-        "11-19"
+        "11-19",
+        "11-20"
       ],
       "values": [
-        20,
         24,
         32,
         0,
         1,
         24,
-        33,
+        32,
         22,
-        16,
-        18,
+        15,
+        17,
         1,
         0,
         19,
-        28,
+        26,
         19,
         15,
-        15,
+        14,
         0,
         0,
         30,
-        25,
-        17,
+        24,
+        16,
         16,
         22,
         0,
         1,
-        27,
-        24,
+        39,
+        25,
+        15,
         0,
         0
       ]
@@ -240,20 +240,20 @@
         "2026-W47"
       ],
       "values": [
+        150,
         151,
-        153,
         162,
         128,
-        114,
-        96,
         111,
-        51
+        93,
+        109,
+        79
       ]
     },
     "scoring": "v3",
     "bygging_starter_na": {
-      "antall": 456,
-      "siste_14_dager": 67,
+      "antall": 467,
+      "siste_14_dager": 74,
       "liste": [
         {
           "kommune": "Stavanger",
@@ -261,6 +261,27 @@
           "fase": "Igangsettingstillatelse",
           "score": 75,
           "dato": "2026-11-06"
+        },
+        {
+          "kommune": "Bergen",
+          "type": "Nybygg",
+          "fase": "Igangsettingstillatelse",
+          "score": 65,
+          "dato": "2026-11-18"
+        },
+        {
+          "kommune": "Bergen",
+          "type": "Nybygg",
+          "fase": "Igangsettingstillatelse",
+          "score": 65,
+          "dato": "2026-11-18"
+        },
+        {
+          "kommune": "Bergen",
+          "type": "Nybygg",
+          "fase": "Igangsettingstillatelse",
+          "score": 65,
+          "dato": "2026-11-18"
         },
         {
           "kommune": "Grimstad",
@@ -338,27 +359,6 @@
           "fase": "Igangsettingstillatelse",
           "score": 65,
           "dato": "2026-11-16"
-        },
-        {
-          "kommune": "Sandnes",
-          "type": "Nybygg",
-          "fase": "Igangsettingstillatelse",
-          "score": 64,
-          "dato": "2026-11-17"
-        },
-        {
-          "kommune": "Fredrikstad",
-          "type": "Nybygg",
-          "fase": "Igangsettingstillatelse",
-          "score": 64,
-          "dato": "2026-11-16"
-        },
-        {
-          "kommune": "Stavanger",
-          "type": "Nybygg",
-          "fase": "Igangsettingstillatelse",
-          "score": 64,
-          "dato": "2026-11-16"
         }
       ]
     }
@@ -367,6 +367,6 @@
     "antall_poster": 3,
     "totalt": 187.5
   },
-  "venter_pa_tobbiz_antall": 1,
+  "venter_pa_tobbiz_antall": 2,
   "neste_steg_antall": 3
 }
